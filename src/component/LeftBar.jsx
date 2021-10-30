@@ -3,15 +3,17 @@ import { ColorComponent } from './ColorComponent'
 
 const Wrapper = styled.div`
     width: 150px;
-    border-right: 1px solid;
-    height: 100vh;
+    border-right: 1px solid #eeeeee;
+    height: 100%;
+    padding: 15px;
 `
 
-export const LeftBar = () => {
+export const LeftBar = (props) => {
+    const { onAddNote } = props
     return (
         <Wrapper>
-            <h5>Docket</h5>
-            <ColorComponent />
+            <p>Docket</p>
+            <ColorComponent onAddNote={onAddNote} />
         </Wrapper>
     )
 }
